@@ -37,8 +37,7 @@ int main()
     cout << "x " << quantity << endl;
     cout << "Total price is: $" << total << endl;
 
-
-
+    
 
 
 
