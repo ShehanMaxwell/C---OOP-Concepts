@@ -5,9 +5,12 @@ using namespace std;
 
 int main()
 {
-    string cars [] = { "Corvette" , "Tesla" , "Ferrari" };
+    string cars[] = { "Corvette" , "Tesla" , "Ferrari" };
 
-    cout << cars[0] << endl;
+    for (int i=0; i < sizeof(cars)/sizeof(cars[0]); i++){
+        cout << cars[i];
+    };
+
 
     cout << endl;
     return 0;
