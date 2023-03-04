@@ -2,24 +2,22 @@
 #include <string>
 #include <algorithm>
 #include <fstream>
+#include <string>
 using namespace std;
+
 
 int main()
 {
     fstream myFile;
-    myFile.open("maxwell.txt",ios::out);// write
-
+    myFile.open("maxwell.txt",ios::in); //read mode
     if(myFile.is_open()){
-        myFile << "Hello\n";
-        myFile << "This is second line\n";
+        string line;
+        while(getline(myFile,line)) {
+             cout << line << endl;
+        };
         myFile.close();
     };
-    myFile.open("maxwell.txt",ios::app);// append mode
-
-    if(myFile.is_open()){
-        myFile << "Hello2\n";
-        myFile.close();  
-    };
+   
     cout << endl;
     return 0;
 }
